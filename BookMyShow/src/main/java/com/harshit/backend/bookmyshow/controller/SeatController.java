@@ -1,6 +1,6 @@
 package com.harshit.backend.bookmyshow.controller;
 
-import com.harshit.backend.bookmyshow.model.Seat;
+import com.harshit.backend.bookmyshow.dto.SeatResponse;
 import com.harshit.backend.bookmyshow.service.SeatService;
 import java.util.List;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/seats")
 public class SeatController {
+
     private final SeatService seatService;
 
     public SeatController(SeatService seatService) {
@@ -18,7 +19,7 @@ public class SeatController {
     }
 
     @GetMapping("/show/{showId}")
-    public List<Seat> getSeatsByShowId(@PathVariable Long showId) {
+    public List<SeatResponse> getSeatsByShowId(@PathVariable Long showId) {
         return seatService.getSeatsByShowId(showId);
     }
 }

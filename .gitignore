@@ -1,0 +1,14 @@
+# Interview prep notes - personal study material, not part of the project.
+docs/INTERVIEW_QA.md
+
+# Build output
+target/
+*.class
+
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# OS
+.DS_Store
